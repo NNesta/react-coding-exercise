@@ -37,9 +37,15 @@ const Custom = () => {
         </li>
       </ul>
       <div className="flex items-center justify-center h-full gap-4">
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
+        <Button onClick={() => alert(`You clicked on Button 1`)}>
+          Button 1
+        </Button>
+        <Button onClick={() => alert(`You clicked on Button 2`)}>
+          Button 2
+        </Button>
+        <Button onClick={() => alert(`You clicked on Button 3`)}>
+          Button 3
+        </Button>
       </div>
     </div>
   );
