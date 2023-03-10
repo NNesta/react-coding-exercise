@@ -2,10 +2,12 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="h-screen text-center">
       <h1 className="text-7xl font-bold">React coding exercices</h1>
-      <ul>
-        <li></li>
+      <ul className="h-full flex items-center justify-center">
+        <li>
+          <a href="/customlist">Rendering custom Component</a>
+        </li>
       </ul>
     </div>
   );
