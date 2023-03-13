@@ -3,6 +3,13 @@ import { useState } from "react";
 const Form = () => {
   const [names, setNames] = useState({ firstName: "", lastName: "" });
   let fullName = names.firstName + " " + names.lastName;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fullName.trim()
+      ? alert(`Hello ${names.firstName} ${names.lastName}`)
+      : alert("Please enter your names");
+  };
+
   return (
     <div className="max-w-xl mx-auto h-screen">
       <ul className="flex text-blue-500 items-center gap-4">
@@ -39,11 +46,7 @@ const Form = () => {
       </ul>
       <div className="flex items-center justify-center h-full">
         <form
-          onSubmit={() =>
-            fullName.trim()
-              ? alert(`Hello ${names.firstName} ${names.lastName}`)
-              : alert("Please enter your names")
-          }
+          onSubmit={handleSubmit}
           className="w-full max-w-sm flex flex-col gap-4"
         >
           <input
