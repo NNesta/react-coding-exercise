@@ -1,5 +1,3 @@
-import React from "react";
-
 const Captures = () => {
   return (
     <div className="max-w-xl mx-auto h-screen">
