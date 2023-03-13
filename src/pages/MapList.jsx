@@ -1,5 +1,3 @@
-import React from "react";
-
 const MapList = () => {
   return (
     <div className="max-w-xl mx-auto h-screen">
