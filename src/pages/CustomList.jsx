@@ -1,4 +1,3 @@
-import React from "react";
 import AnimalComponent from "../components/AnimalComponent";
 
 const CustomList = () => {
@@ -37,11 +36,9 @@ const CustomList = () => {
         </li>
       </ul>
       <div className="flex flex-col items-center gap-2  h-full my-40">
-        {["dog", "cat", "chicken", "cow", "sheep", "horse"].map(
-          (name, index) => (
-            <AnimalComponent name={name} />
-          )
-        )}
+        {["dog", "cat", "chicken", "cow", "sheep", "horse"].map((name) => (
+          <AnimalComponent name={name} />
+        ))}
       </div>
     </div>
   );
