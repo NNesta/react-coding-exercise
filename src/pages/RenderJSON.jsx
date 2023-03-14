@@ -1,4 +1,5 @@
-import data from "./data.json";
+import data from "../data.json";
+import CardJoke from "../components/CardJoke";
 
 const RenderJSON = () => {
   return (
@@ -29,7 +30,7 @@ const RenderJSON = () => {
           <a href="/">Exercise7</a>
         </li>
         <li className="underline">
-          <a href="/">Exercise8</a>
+          <a href="/render-json">Exercise8</a>
         </li>
         <li className="underline">
           <a href="/">Exercise9</a>
@@ -38,12 +39,11 @@ const RenderJSON = () => {
       <div className="w-full my-16">
         <ul className="bg-[#E0F8DB] flex  gap-10 p-8">
           {data.map((punch, index) => (
-            <li key={index} className="p-6 bg-white">
-              <h1 className="text-4xl font-bold text-center">{punch.setup}</h1>
-              <p className="text-center text-gray-600 my-6">
-                {punch.punchline}
-              </p>
-            </li>
+            <CardJoke
+              key={index}
+              setup={punch.setup}
+              punchline={punch.punchline}
+            />
           ))}
         </ul>
       </div>
