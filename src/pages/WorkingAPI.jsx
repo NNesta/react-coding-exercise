@@ -3,13 +3,14 @@ import Card from "../components/Card";
 
 const WorkingAPI = () => {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
-  useEffect(() => {
+  const fetchAPI = () => {
     fetch(" https://random-data-api.com/api/users/random_user?size=10")
       .then((response) => response.json())
       .then((result) => setData(result));
-  }, [count]);
-  console.log(data);
+  };
+  useEffect(() => {
+    fetchAPI();
+  }, []);
   return (
     <div className="max-w-8xl mx-auto h-screen">
       <ul className="flex text-blue-500 items-center gap-4 justify-center">
@@ -46,7 +47,7 @@ const WorkingAPI = () => {
       </ul>
       <div className="w-full my-16 flex flex-col items-center gap-12">
         <button
-          onClick={() => setCount((prevCount) => prevCount + 1)}
+          onClick={fetchAPI}
           className="bg-[#F0003C] text-white font-600 px-4 py-2 text-3xl hover:shadow-none shadow-2xl shadow-[#F0003C] rounded-2xl "
         >
           Fetch Random

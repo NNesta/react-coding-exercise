@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = (props) => {
   return (
     <div className=" bg-white w-[400px] h-[350px]">
